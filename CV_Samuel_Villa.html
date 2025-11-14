@@ -1,1 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Samuel Villa Monsalve</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #1e1e2f;
+            --secondary: #2d2d44;
+            --accent: #4cc9f0;
+            --text: #f5f5f5;
+            --card-bg: #29293d;
+            --radius: 12px;
+        }
+
+        .light {
+            --primary: #f2f2f2;
+            --secondary: #ffffff;
+            --accent: #0077ff;
+            --text: #1a1a1a;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+            transition: 0.4s;
+        }
+
+        .theme-btn {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            background: var(--accent);
+            border: none;
+            color: white;
+            padding: 10px 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.3s;
+            z-index: 200;
+        }
+
+        .theme-btn:hover {
+            transform: scale(1.1);
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: var(--secondary);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+            transition: 0.4s;
+        }
+
+        header h1 {
+            font-size: 2.4rem;
+            color: var(--accent);
+        }
+
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            background: var(--secondary);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: 0.4s;
+        }
+
+        .navbar a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            color: var(--accent);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+            transition: 0.4s;
+        }
+
+        .fade {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--secondary);
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .navbar {
+                gap: 0.8rem;
+                font-size: 14px;
+            }
+
+            .card {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="theme-btn" id="themeToggle">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <header>
+        <h1>Samuel Villa Monsalve</h1>
+        <p>Aspirante a Ingeniero de Sistemas | Desarrollador en Formación</p>
+    </header>
+
+    <nav class="navbar">
+        <a href="#sobre-mi"><i class="fa-solid fa-user"></i> Sobre Mi</a>
+        <a href="#experiencia"><i class="fa-solid fa-briefcase"></i> Experiencia</a>
+        <a href="#educacion"><i class="fa-solid fa-graduation-cap"></i> Educación</a>
+        <a href="#idiomas"><i class="fa-solid fa-language"></i> Idiomas</a>
+        <a href="#habilidades"><i class="fa-solid fa-code"></i> Habilidades</a>
+        <a href="#contacto"><i class="fa-solid fa-envelope"></i> Contacto</a>
+    </nav>
+
+    <main>
+        <section id="sobre-mi" class="card fade">
+            <h2>Sobre Mi</h2>
+            <p>Soy <strong>Samuel Villa Monsalve</strong>, me gusta jugar videojuegos (competitivos, metroidvania, acción y aventura), escuchar música, programar y desarrollar videojuegos. Me gustaría ser ingeniero de sistemas, desarrollar mínimo 3 juegos, crear mi propio emprendimiento y lograr estabilidad económica.</p>
+        </section>
+
+        <section id="experiencia" class="card fade">
+            <h2>Experiencia Laboral</h2>
+            <p>Trabajo como <strong>vendedor</strong> en una tienda <strong>sexshop independiente</strong> desde hace más de <strong>2 años</strong>. Allí he desarrollado habilidades como hablar con clientes, ofrecer productos de manera efectiva y realizar ventas exitosas.</p>
+        </section>
+
+        <section id="educacion" class="card fade">
+            <h2>Educación</h2>
+            <ul>
+                <li><strong>Bachiller Académico</strong></li>
+                <li>Técnico en Programación de Software – SENA</li>
+                <li>Certificado de Desarrollo de Software</li>
+            </ul>
+        </section>
+
+        <section id="idiomas" class="card fade">
+            <h2>Idiomas</h2>
+            <ul>
+                <li>Español – Lengua Materna</li>
+                <li>Inglés – Nivel A2</li>
+            </ul>
+        </section>
+
+        <section id="habilidades" class="card fade">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>Manejo básico de JavaScript, HTML y MySQL</li>
+                <li>Manejo de Visual Studio Code, XAMPP y Apache NetBeans</li>
+            </ul>
+        </section>
+
+        <section id="contacto" class="card fade">
+            <h2>Contacto</h2>
+            <ul>
+                <li><i class="fa-solid fa-envelope"></i> <strong>Correo:</strong> samuelvillamonsalve518@gmail.com</li>
+                <li><i class="fa-solid fa-phone"></i> <strong>Celular:</strong> 3243284537</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Samuel Villa Monsalve</p>
+    </footer>
+
+    <script>
+        const toggleBtn = document.getElementById("themeToggle");
+        toggleBtn.addEventListener("click", () => {
+            document.body.classList.toggle("light");
+            const icon = toggleBtn.querySelector("i");
+            if (document.body.classList.contains("light")) {
+                icon.classList.replace("fa-moon", "fa-sun");
+            } else {
+                icon.classList.replace("fa-sun", "fa-moon");
+            }
+        });
+    </script>
+
+</body>
+</html>
 
